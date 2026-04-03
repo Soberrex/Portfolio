@@ -1,0 +1,95 @@
+/* =============================================
+   ANIMATIONS — Nikunj-style
+   ============================================= */
+
+/* Pulse glow for status dots */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(41,214,185,0.6);
+    opacity: 1;
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(41,214,185,0);
+    opacity: 0.8;
+  }
+}
+
+/* Scroll progress bar */
+#scroll-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #29d6b9, #1a9e87);
+  z-index: 9999;
+  transition: width 0.1s linear;
+}
+
+/* Nav link underline */
+.nav-links a {
+  position: relative;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; left: 50%; right: 50%;
+  height: 1px;
+  background: var(--cyan);
+  transition: left 0.3s ease, right 0.3s ease;
+  opacity: 0;
+}
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  left: 12px; right: 12px;
+  opacity: 1;
+}
+
+/* Timeline node ping */
+@keyframes node-ping {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(41,214,185,0.5); }
+  50% { box-shadow: 0 0 0 8px rgba(41,214,185,0); }
+}
+
+.timeline-node { animation: node-ping 3s ease-in-out infinite; }
+
+/* Hero name entrance */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-badge    { animation: fade-up 0.6s ease 0.1s both; }
+.hero-name     { animation: fade-up 0.7s ease 0.25s both; }
+.hero-tagline  { animation: fade-up 0.7s ease 0.4s both; }
+.hero-desc     { animation: fade-up 0.7s ease 0.55s both; }
+.hero-actions  { animation: fade-up 0.7s ease 0.7s both; }
+.hero-contact-card { animation: fade-up 0.8s ease 0.4s both; }
+.hero-stats    { animation: fade-up 0.7s ease 0.85s both; }
+
+/* Shimmer on about-cards */
+@keyframes shimmer-border {
+  0%, 100% { border-color: rgba(255,255,255,0.07); }
+  50%       { border-color: rgba(41,214,185,0.15); }
+}
+
+/* Filter button active glow */
+.filter-btn.active {
+  box-shadow: 0 0 16px rgba(41,214,185,0.3);
+}
+
+/* Card lift */
+.project-card,
+.about-card,
+.timeline-card,
+.skill-cat-card {
+  will-change: transform;
+}
+
+/* Fade-in for filtered projects */
+@keyframes card-appear {
+  from { opacity: 0; transform: scale(0.97) translateY(8px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.project-card:not([data-hidden="true"]) {
+  animation: card-appear 0.35s ease both;
+}

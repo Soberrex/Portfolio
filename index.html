@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Subham Kumar Panda — AI/ML Developer specializing in Generative AI, RAG systems, Computer Vision, and intelligent full-stack applications." />
+  <meta name="author" content="Subham Kumar Panda" />
+  <meta property="og:title" content="Subham Kumar Panda | AI/ML Developer" />
+  <meta property="og:description" content="Building intelligent software — GenAI, RAG, Computer Vision, and agentic workflows." />
+  <title>Subham Kumar Panda | AI/ML Developer</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+
+<!-- Scroll Progress -->
+<div id="scroll-progress"></div>
+
+<!-- ════════════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+
+    <!-- Logo -->
+    <a href="#hero" class="nav-logo">
+      <div class="logo-icon">
+        <div class="logo-icon-inner">SKP</div>
+      </div>
+      <span class="nav-brand">Subham Kumar Panda</span>
+    </a>
+
+    <!-- Links -->
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about"      id="nav-about">About</a></li>
+      <li><a href="#experience" id="nav-exp">Experience</a></li>
+      <li><a href="#projects"   id="nav-proj">Projects</a></li>
+      <li><a href="#skills"     id="nav-skills">Skills</a></li>
+      <li><a href="#contact"    id="nav-contact">Contact</a></li>
+    </ul>
+
+    <!-- Right side -->
+    <div style="display:flex;align-items:center;gap:0.75rem;flex-shrink:0;">
+      <a href="Resume.pdf" download class="nav-resume" id="nav-resume-btn">
+        <i class="fa-solid fa-download"></i> Resume
+      </a>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+  </div>
+</nav>
+
+<!-- ════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════ -->
+<section class="hero" id="hero">
+  <div class="hero-glow-tl" aria-hidden="true"></div>
+  <div class="hero-glow-br" aria-hidden="true"></div>
+
+  <div class="container">
+    <div class="hero-grid">
+
+      <!-- Left -->
+      <div class="hero-left">
+        <div class="hero-badge" id="hero-badge">
+          <span class="badge-dot"></span>
+          Available for New Opportunities
+        </div>
+
+        <h1 class="hero-name" id="hero-name">Subham Kumar Panda</h1>
+
+        <p class="hero-tagline" id="hero-tagline">
+          Building <span class="cyan">Intelligent</span> Software
+        </p>
+
+        <p class="hero-desc" id="hero-desc">
+          I build full-stack AI platforms with Python/FastAPI, React, and modern GenAI frameworks
+          — from Hybrid RAG agents and NLP pipelines to computer vision systems
+          and evolutionary algorithms.
+        </p>
+
+        <div class="hero-actions" id="hero-actions">
+          <a href="#projects" class="btn-hero-primary" id="hero-proj-btn">
+            View Projects <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="Resume.pdf" download class="btn-hero-secondary" id="hero-resume-btn">
+            <i class="fa-solid fa-download"></i> Resume
+          </a>
+        </div>
+      </div>
+
+      <!-- Right — Contact Card -->
+      <div class="hero-contact-card" id="hero-contact-card">
+        <div class="contact-card-logo">
+          <div class="contact-card-avatar">SKP</div>
+          <div>
+            <div class="contact-card-name">Subham Kumar Panda</div>
+            <div class="contact-card-role">AI/ML Developer</div>
+          </div>
+        </div>
+        <div class="contact-card-links">
+          <a href="mailto:subhampersonal123@gmail.com" class="contact-card-link" id="card-email">
+            <i class="fa-solid fa-envelope"></i>
+            subhampersonal123@gmail.com
+          </a>
+          <a href="https://www.linkedin.com/in/subham-kumar-panda-156420259" target="_blank" rel="noopener" class="contact-card-link" id="card-linkedin">
+            <i class="fa-brands fa-linkedin-in"></i>
+            linkedin.com/in/subham-kumar-panda
+          </a>
+          <a href="https://github.com/soberrex" target="_blank" rel="noopener" class="contact-card-link" id="card-github">
+            <i class="fa-brands fa-github"></i>
+            github.com/soberrex
+          </a>
+        </div>
+      </div>
+
+    </div><!-- /hero-grid -->
+
+    <!-- Stats Bar -->
+    <div class="hero-stats" id="hero-stats">
+      <div class="stat-item">
+        <div class="stat-number">30+</div>
+        <div class="stat-label">Algorithms Solved</div>
+        <div class="stat-sub">HackerRank Competitive Programming</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">4+</div>
+        <div class="stat-label">AI Architectures Engineered</div>
+        <div class="stat-sub">Hybrid RAG, Genetic Algos &amp; Vision</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">2</div>
+        <div class="stat-label">Industry AI Internships</div>
+        <div class="stat-sub">Applied Machine Learning &amp; Data</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">NSoC</div>
+        <div class="stat-label">Active '26 Contributor</div>
+        <div class="stat-sub">Nexus Spring of Code</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     ABOUT
+════════════════════════════════════════════ -->
+<section class="about section" id="about">
+  <div class="about-glow" aria-hidden="true"></div>
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="split-layout">
+
+      <!-- Left sticky -->
+      <div class="split-left reveal">
+        <div class="about-logo-row">
+          <div class="about-logo">SKP</div>
+          <div class="section-pill">Profile</div>
+        </div>
+        <div class="section-heading-lg">
+          About<br /><span class="cyan">Subham</span>
+        </div>
+      </div>
+
+      <!-- Right content -->
+      <div class="split-right">
+        <h2 class="about-intro-heading reveal">
+          I build intelligent software — Generative AI, robust backends, agentic workflows, and algorithmic optimization.
+        </h2>
+
+        <p class="about-body reveal reveal-delay-1">
+          As a Developer, I create AI-enabled platforms and intelligent systems that address complicated, real-life problems. These projects span hybrid RAG agent systems, Python and FastAPI/Flask-based backends, real-time computer vision pipelines, and evolutionary algorithms in logistics planning. Whether predicting post-crisis rebuilding efforts or designing fully stack-safe networks, I always aim to connect computer architecture with its execution through software. Being involved in the entire software development lifecycle — from conceptual data modeling to the actual user experience — is something I love.
+        </p>
+
+        <div class="about-cards">
+          <div class="about-card reveal reveal-delay-1">
+            <p>Built <strong>DocuChatAI</strong>, a Hybrid RAG agent for enterprise knowledge retrieval, utilizing FastAPI and React to streamline complex document analysis and intelligent querying.</p>
+          </div>
+          <div class="about-card reveal reveal-delay-2">
+            <p><strong>EcoRoute</strong>, an optimization engine for logistical processes employing evolutionary algorithms such as Genetic Algorithms for solving difficult spatial problems.</p>
+          </div>
+          <div class="about-card reveal reveal-delay-3">
+            <p>Developed a real-time <strong>hand gesture recognition</strong> system using computer vision techniques to facilitate touch-free human-computer interaction.</p>
+          </div>
+          <div class="about-card reveal reveal-delay-4">
+            <p>Developing <strong>Synapse</strong>, a full-stack academic platform secured by a custom dual-layer verification system integrating institutional IDs and peer-reviewed authentication.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     EXPERIENCE
+════════════════════════════════════════════ -->
+<section class="experience section" id="experience">
+  <div class="exp-glow-l" aria-hidden="true"></div>
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="split-layout">
+
+      <!-- Left sticky -->
+      <div class="split-left reveal">
+        <div class="section-pill">Journey</div>
+        <div class="section-heading-lg" style="margin-top:1rem;">
+          Professional<br /><span class="cyan">Experience</span>
+        </div>
+        <p class="exp-tagline">
+          From internships in applied machine learning to architecting production AI systems — focused on real-world impact.
+        </p>
+        <p class="exp-end-note">And a new <span>chapter</span> ahead.</p>
+      </div>
+
+      <!-- Right — Timeline -->
+      <div class="split-right">
+        <div class="timeline-wrap">
+          <div class="timeline-line"></div>
+
+          <!-- Entry 1 -->
+          <div class="timeline-entry reveal">
+            <div class="timeline-node"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="meta-badge"><i class="fa-solid fa-briefcase"></i> Experience</span>
+                <span class="meta-badge"><i class="fa-regular fa-calendar"></i> Aug 2024 – Oct 2024</span>
+              </div>
+              <div class="timeline-role">AI/ML Intern</div>
+              <div class="timeline-company">Acmegrade</div>
+              <ul class="timeline-bullets">
+                <li>Engineered and optimized machine learning models using Python, improving data processing efficiency and prediction accuracy for core tasks.</li>
+                <li>Architected automated data pipelines to clean, preprocess, and structure complex datasets, reducing manual data preparation time by 8 hours per week.</li>
+                <li>Collaborated on integrating AI models into functional application backends using FastAPI/Flask, ensuring seamless user interaction and low-latency API responses.</li>
+                <li>Conducted rigorous exploratory data analysis (EDA) and evaluated model performance, documenting architectural decisions to streamline future development cycles.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Entry 2 -->
+          <div class="timeline-entry reveal reveal-delay-1">
+            <div class="timeline-node"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="meta-badge"><i class="fa-solid fa-microchip"></i> ML Architecture</span>
+                <span class="meta-badge"><i class="fa-solid fa-flask"></i> RoBERTa · SHAP · Python</span>
+              </div>
+              <div class="timeline-role">NLP Emotion Prediction Engine</div>
+              <div class="timeline-company">ArvyaX</div>
+              <ul class="timeline-bullets">
+                <li>Fine-tuned a multi-task RoBERTa transformer to predict emotional states and intensity from unstructured journal text, achieving a strong 0.678 F1-score on noisy datasets.</li>
+                <li>Implemented Monte Carlo Dropout to calculate model uncertainty, generating highly calibrated confidence scores for every prediction.</li>
+                <li>Engineered a dynamic decision engine that maps ML predictions and user metadata (stress, time of day) directly to targeted wellness interventions.</li>
+                <li>Evaluated model explainability using SHAP analysis and ablation studies, proving the transformer's superior performance over traditional ML baselines.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div><!-- /timeline-wrap -->
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     PROJECTS
+════════════════════════════════════════════ -->
+<section class="projects section" id="projects">
+  <div class="proj-glow" aria-hidden="true"></div>
+  <div class="container" style="position:relative;z-index:1;">
+
+    <div class="section-header-row reveal">
+      <div class="section-header-left">
+        <div class="section-pill">Work</div>
+        <div class="section-heading-sm" style="margin-top:0.75rem;">
+          Featured <span class="cyan">Projects</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Filter tabs -->
+    <div class="filter-tabs reveal reveal-delay-1">
+      <button class="filter-btn active" data-filter="all" id="filter-all">All</button>
+      <button class="filter-btn" data-filter="rag" id="filter-rag">RAG Systems</button>
+      <button class="filter-btn" data-filter="nlp" id="filter-nlp">NLP</button>
+      <button class="filter-btn" data-filter="vision" id="filter-vision">Computer Vision</button>
+      <button class="filter-btn" data-filter="fullstack" id="filter-fullstack">Full Stack</button>
+      <button class="filter-btn" data-filter="algorithms" id="filter-algo">Algorithms</button>
+    </div>
+
+    <!-- Grid -->
+    <div class="projects-grid">
+
+      <!-- 1. DocuChat AI -->
+      <article class="project-card reveal reveal-delay-1" data-category="rag fullstack" id="proj-docuchat">
+        <div class="project-emoji">📄</div>
+        <h3 class="project-name">DocuChat AI</h3>
+        <p class="project-desc">
+          Hybrid RAG agent for enterprise knowledge retrieval. Processes PDF, TXT, and DOCX formats with semantic vector search via ChromaDB, delivering context-aware intelligent responses.
+        </p>
+        <div class="project-stack">
+          <span class="project-tag">FastAPI</span>
+          <span class="project-tag">React</span>
+          <span class="project-tag">LlamaIndex</span>
+          <span class="project-tag">PostgreSQL</span>
+          <span class="project-tag">ChromaDB</span>
+          <span class="project-tag">TypeScript</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/soberrex" target="_blank" rel="noopener" class="project-link-btn" id="proj-docuchat-gh">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+        </div>
+      </article>
+
+      <!-- 2. Intent Classification Chatbot -->
+      <article class="project-card reveal reveal-delay-2" data-category="nlp" id="proj-chatbot">
+        <div class="project-emoji">🤖</div>
+        <h3 class="project-name">Intent Classification Chatbot</h3>
+        <p class="project-desc">
+          Neural network-based chatbot using TensorFlow for intent recognition — trained on labeled dialogue data to classify user inputs and generate contextual responses, deployed as an interactive Streamlit app.
+        </p>
+        <div class="project-stack">
+          <span class="project-tag">Python</span>
+          <span class="project-tag">TensorFlow</span>
+          <span class="project-tag">Streamlit</span>
+          <span class="project-tag">NLTK</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/soberrex" target="_blank" rel="noopener" class="project-link-btn" id="proj-chatbot-gh">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+        </div>
+      </article>
+
+      <!-- 3. Gesture Recognition -->
+      <article class="project-card reveal reveal-delay-3" data-category="vision" id="proj-gesture">
+        <div class="project-emoji">✋</div>
+        <h3 class="project-name">Gesture Recognition System</h3>
+        <p class="project-desc">
+          Real-time hand gesture recognition detecting 21 hand landmarks using MediaPipe and OpenCV — enabling touch-free human-computer interaction and accessibility applications.
+        </p>
+        <div class="project-stack">
+          <span class="project-tag">Python</span>
+          <span class="project-tag">MediaPipe</span>
+          <span class="project-tag">OpenCV</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/soberrex" target="_blank" rel="noopener" class="project-link-btn" id="proj-gesture-gh">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+        </div>
+      </article>
+
+      <!-- 4. Synapse -->
+      <article class="project-card reveal reveal-delay-1" data-category="fullstack" id="proj-synapse">
+        <div class="project-emoji">🧩</div>
+        <h3 class="project-name">Synapse</h3>
+        <p class="project-desc">
+          Full-stack academic platform secured by a custom dual-layer verification system integrating institutional IDs and peer-reviewed authentication for trusted academic collaboration.
+        </p>
+        <div class="project-stack">
+          <span class="project-tag">Full Stack</span>
+          <span class="project-tag">Auth Systems</span>
+          <span class="project-tag">PostgreSQL</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/soberrex" target="_blank" rel="noopener" class="project-link-btn" id="proj-synapse-gh">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+        </div>
+      </article>
+
+      <!-- 5. EcoRoute -->
+      <article class="project-card reveal reveal-delay-2" data-category="algorithms" id="proj-ecoroute">
+        <div class="project-emoji">🧬</div>
+        <h3 class="project-name">EcoRoute</h3>
+        <p class="project-desc">
+          Logistics optimization engine employing evolutionary algorithms including Genetic Algorithms for solving complex spatial routing problems, drastically reducing operational costs.
+        </p>
+        <div class="project-stack">
+          <span class="project-tag">Python</span>
+          <span class="project-tag">Genetic Algorithms</span>
+          <span class="project-tag">Optimization</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/soberrex" target="_blank" rel="noopener" class="project-link-btn" id="proj-ecoroute-gh">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+        </div>
+      </article>
+
+      <!-- 6. NLP Emotion Engine -->
+      <article class="project-card reveal reveal-delay-3" data-category="nlp" id="proj-emotion">
+        <div class="project-emoji">🧠</div>
+        <h3 class="project-name">NLP Emotion Prediction Engine</h3>
+        <p class="project-desc">
+          Fine-tuned multi-task RoBERTa transformer achieving 0.678 F1-score on noisy journal data. Implements Monte Carlo Dropout for uncertainty quantification and SHAP-based explainability.
+        </p>
+        <div class="project-stack">
+          <span class="project-tag">RoBERTa</span>
+          <span class="project-tag">SHAP</span>
+          <span class="project-tag">Python</span>
+          <span class="project-tag">Transformers</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/soberrex" target="_blank" rel="noopener" class="project-link-btn" id="proj-emotion-gh">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+        </div>
+      </article>
+
+    </div><!-- /projects-grid -->
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     SKILLS
+════════════════════════════════════════════ -->
+<section class="skills section" id="skills">
+  <div class="skills-glow" aria-hidden="true"></div>
+  <div class="container" style="position:relative;z-index:1;">
+
+    <div class="section-header-row reveal">
+      <div class="section-header-left">
+        <div class="section-pill">Arsenal</div>
+        <div class="section-heading-sm" style="margin-top:0.75rem;">
+          Technical <span class="cyan">Skills</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="skills-grid">
+
+      <!-- 1. Generative AI & ML -->
+      <div class="skill-cat-card reveal reveal-delay-1" id="skill-genai">
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon">🧠</div>
+          <span class="skill-cat-name">Generative AI &amp; ML</span>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">Generative AI</span>
+          <span class="skill-tag">Machine Learning</span>
+          <span class="skill-tag">RAG</span>
+          <span class="skill-tag">NLP</span>
+          <span class="skill-tag">Computer Vision</span>
+          <span class="skill-tag">TensorFlow</span>
+          <span class="skill-tag">PyTorch</span>
+          <span class="skill-tag">Scikit-Learn</span>
+          <span class="skill-tag">LlamaIndex</span>
+          <span class="skill-tag">HuggingFace</span>
+          <span class="skill-tag">NLTK</span>
+          <span class="skill-tag">OpenCV</span>
+          <span class="skill-tag">MediaPipe</span>
+        </div>
+      </div>
+
+      <!-- 2. Full Stack Development -->
+      <div class="skill-cat-card reveal reveal-delay-2" id="skill-fullstack">
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon">⚡</div>
+          <span class="skill-cat-name">Full Stack Development</span>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">TypeScript</span>
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">FastAPI</span>
+          <span class="skill-tag">Flask</span>
+          <span class="skill-tag">Streamlit</span>
+          <span class="skill-tag">HTML</span>
+          <span class="skill-tag">CSS</span>
+          <span class="skill-tag">REST APIs</span>
+        </div>
+      </div>
+
+      <!-- 3. Databases -->
+      <div class="skill-cat-card reveal reveal-delay-3" id="skill-db">
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon">🗄️</div>
+          <span class="skill-cat-name">Databases</span>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">MongoDB</span>
+          <span class="skill-tag">Redis</span>
+          <span class="skill-tag">ChromaDB</span>
+          <span class="skill-tag">SQL</span>
+        </div>
+      </div>
+
+      <!-- 4. Dev Tools -->
+      <div class="skill-cat-card reveal reveal-delay-4" id="skill-tools">
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon">🛠️</div>
+          <span class="skill-cat-name">Dev Tools</span>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">Git / GitHub</span>
+          <span class="skill-tag">Postman</span>
+          <span class="skill-tag">Ollama</span>
+          <span class="skill-tag">Claude Code</span>
+          <span class="skill-tag">Jupyter</span>
+          <span class="skill-tag">Swagger UI</span>
+          <span class="skill-tag">VS Code</span>
+        </div>
+      </div>
+
+    </div><!-- /skills-grid -->
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     CONTACT
+════════════════════════════════════════════ -->
+<section class="contact section" id="contact">
+  <div class="contact-glow" aria-hidden="true"></div>
+  <div class="container" style="position:relative;z-index:1;">
+
+    <div style="text-align:center;margin-bottom:3.5rem;" class="reveal">
+      <div class="section-pill" style="justify-content:center;">Get In Touch</div>
+      <div class="section-heading-sm" style="margin-top:0.75rem;">
+        Let's Build Something <span class="cyan">Intelligent</span>
+      </div>
+    </div>
+
+    <div class="contact-grid">
+
+      <!-- Left card -->
+      <div class="contact-left-card reveal">
+        <div>
+          <h2>Open to <span style="color:var(--cyan)">Opportunities</span></h2>
+          <p>
+            Whether it's an AI product, an ML pipeline, a RAG system, or a full-stack application — I'm always excited about challenging problems. Let's connect and build something remarkable.
+          </p>
+        </div>
+        <div>
+          <a href="Resume.pdf" download class="btn-download" id="contact-resume-btn">
+            <i class="fa-solid fa-download"></i> Download Resume
+          </a>
+          <div class="contact-availability">
+            <span class="avail-dot"></span>
+            Available for new opportunities
+          </div>
+        </div>
+      </div>
+
+      <!-- Right — Form card -->
+      <div class="contact-form-card reveal reveal-delay-1">
+        <form
+          id="contact-form"
+          action="https://formspree.io/f/xaqlpjqp"
+          method="POST"
+        >
+          <div class="form-group">
+            <label class="form-label" for="contact-name">Name</label>
+            <input
+              id="contact-name"
+              type="text"
+              name="name"
+              class="form-input"
+              placeholder="Your full name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="contact-email">Email</label>
+            <input
+              id="contact-email"
+              type="email"
+              name="email"
+              class="form-input"
+              placeholder="your@email.com"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="contact-msg">Message</label>
+            <textarea
+              id="contact-msg"
+              name="message"
+              class="form-textarea"
+              placeholder="Tell me about your project or opportunity..."
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn-send" id="contact-send-btn">
+            <i class="fa-solid fa-paper-plane"></i> Send Message
+          </button>
+          <p class="form-note">
+            Messages are sent securely to subhampersonal123@gmail.com with your email set as the reply-to.
+          </p>
+        </form>
+      </div>
+
+    </div><!-- /contact-grid -->
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <div class="footer-logo-icon">SKP</div>
+        <span class="footer-brand">Subham Kumar Panda</span>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div style="display:flex;gap:0.75rem;">
+        <a href="mailto:subhampersonal123@gmail.com" title="Email"
+           style="width:38px;height:38px;display:flex;align-items:center;justify-content:center;border-radius:50%;border:1px solid var(--card-border);color:var(--text-sub);transition:var(--transition);"
+           id="footer-email"
+           onmouseover="this.style.color='var(--cyan)';this.style.borderColor='var(--cyan)';"
+           onmouseout="this.style.color='';this.style.borderColor='';">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/subham-kumar-panda-156420259" target="_blank" rel="noopener" title="LinkedIn"
+           style="width:38px;height:38px;display:flex;align-items:center;justify-content:center;border-radius:50%;border:1px solid var(--card-border);color:var(--text-sub);transition:var(--transition);"
+           id="footer-linkedin"
+           onmouseover="this.style.color='var(--cyan)';this.style.borderColor='var(--cyan)';"
+           onmouseout="this.style.color='';this.style.borderColor='';">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/soberrex" target="_blank" rel="noopener" title="GitHub"
+           style="width:38px;height:38px;display:flex;align-items:center;justify-content:center;border-radius:50%;border:1px solid var(--card-border);color:var(--text-sub);transition:var(--transition);"
+           id="footer-github"
+           onmouseover="this.style.color='var(--cyan)';this.style.borderColor='var(--cyan)';"
+           onmouseout="this.style.color='';this.style.borderColor='';">
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-copy">
+      © 2026 Subham Kumar Panda · Designed with precision · Built with HTML, CSS &amp; JavaScript
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="js/main.js"></script>
+
+</body>
+</html>
