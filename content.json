@@ -9,10 +9,10 @@
     "monogram": "SKP",
     "verified": true,
     "avatar": "https://github.com/Soberrex.png?size=400",
-    "tagline": "Shipping RAG, agents & LLM features to production",
-    "role": "Python & GenAI Developer",
-    "company": "Aviara Tech",
-    "companyUrl": "#experience",
+    "tagline": "Building agentic, GenAI and full-stack applications",
+    "role": "AI & Software Developer",
+    "company": "",
+    "companyUrl": "",
     "location": "Bhubaneswar, India",
     "mapUrl": "https://maps.google.com/?q=Bhubaneswar",
     "timezone": "Asia/Kolkata",
@@ -50,23 +50,88 @@
     "bookCallUrl": ""
   },
   "about": {
-    "intro": "I'm a Python and GenAI developer who ships production features — RAG, guardrailed agent workflows, REST APIs, PostgreSQL and S3-compatible object storage.",
+    "intro": "I'm a fresher developer focused on agentic development, GenAI and Python full-stack engineering. I enjoy turning ideas into working software — LLM features, REST APIs, databases and cloud storage — and I'm open to AI, SDE and software engineering roles.",
     "bullets": [
-      "Built an LLM-powered **WhatsApp guest-support bot** with structured service-request intake, human handoff and no-hallucination guardrails.",
-      "Owned the **file upload pipeline** of a live multi-tenant B2B SaaS — moved files out of PostgreSQL into object storage with circuit breakers, an outbox and signed URLs.",
-      "Comfortable across the ML stack: fine-tuning **transformers**, explainability with SHAP, and serving models behind **FastAPI**.",
-      "Currently building **LangGraph** agents that turn business questions into safe, read-only SQL. Claude Code and MCP are part of my daily workflow."
+      "Worked on an LLM-powered **WhatsApp guest-support bot** during my internship — structured request intake, human handoff and guardrails against made-up answers.",
+      "Contributed to the **file upload pipeline** of a multi-tenant B2B SaaS, moving files from PostgreSQL to S3-compatible object storage with signed URLs.",
+      "Hands-on with **RAG**, transformer fine-tuning, and serving models behind **FastAPI** and Flask REST APIs.",
+      "Currently exploring **LangGraph** agents that turn business questions into safe, read-only SQL. Claude Code and MCP are part of my daily workflow."
     ]
   },
   "stack": [
     {
-      "category": "Machine Learning",
+      "category": "Languages",
       "items": [
         {
           "name": "Python",
           "icon": "python",
           "url": "https://www.python.org"
         },
+        {
+          "name": "Java",
+          "icon": "openjdk",
+          "url": "https://openjdk.org"
+        },
+        {
+          "name": "C",
+          "icon": "c",
+          "url": "https://en.wikipedia.org/wiki/C_(programming_language)"
+        },
+        {
+          "name": "TypeScript",
+          "icon": "typescript",
+          "url": "https://www.typescriptlang.org"
+        },
+        {
+          "name": "Node.js",
+          "icon": "nodedotjs",
+          "url": "https://nodejs.org"
+        }
+      ]
+    },
+    {
+      "category": "GenAI & Agents",
+      "items": [
+        {
+          "name": "Hugging Face",
+          "icon": "huggingface",
+          "url": "https://huggingface.co"
+        },
+        {
+          "name": "LLM APIs",
+          "icon": "anthropic",
+          "url": "https://docs.anthropic.com"
+        },
+        {
+          "name": "RAG",
+          "icon": "",
+          "url": ""
+        },
+        {
+          "name": "LangChain",
+          "icon": "langchain",
+          "url": "https://www.langchain.com"
+        },
+        {
+          "name": "LangGraph",
+          "icon": "langchain",
+          "url": "https://langchain-ai.github.io/langgraph/"
+        },
+        {
+          "name": "LlamaIndex",
+          "icon": "",
+          "url": "https://www.llamaindex.ai"
+        },
+        {
+          "name": "ChromaDB",
+          "icon": "",
+          "url": "https://www.trychroma.com"
+        }
+      ]
+    },
+    {
+      "category": "Machine Learning",
+      "items": [
         {
           "name": "NumPy",
           "icon": "numpy",
@@ -110,48 +175,13 @@
       ]
     },
     {
-      "category": "NLP & GenAI",
-      "items": [
-        {
-          "name": "Hugging Face",
-          "icon": "huggingface",
-          "url": "https://huggingface.co"
-        },
-        {
-          "name": "LLM APIs",
-          "icon": "anthropic",
-          "url": "https://docs.anthropic.com"
-        },
-        {
-          "name": "RAG",
-          "icon": "",
-          "url": ""
-        },
-        {
-          "name": "LangChain",
-          "icon": "langchain",
-          "url": "https://www.langchain.com"
-        },
-        {
-          "name": "LangGraph",
-          "icon": "langchain",
-          "url": "https://langchain-ai.github.io/langgraph/"
-        },
-        {
-          "name": "LlamaIndex",
-          "icon": "",
-          "url": "https://www.llamaindex.ai"
-        },
-        {
-          "name": "ChromaDB",
-          "icon": "",
-          "url": "https://www.trychroma.com"
-        }
-      ]
-    },
-    {
       "category": "Engineering",
       "items": [
+        {
+          "name": "REST APIs",
+          "icon": "",
+          "url": "https://restfulapi.net"
+        },
         {
           "name": "FastAPI",
           "icon": "fastapi",
@@ -188,16 +218,6 @@
           "url": "https://github.com/features/actions"
         },
         {
-          "name": "TypeScript",
-          "icon": "typescript",
-          "url": "https://www.typescriptlang.org"
-        },
-        {
-          "name": "Next.js",
-          "icon": "nextdotjs",
-          "url": "https://nextjs.org"
-        },
-        {
           "name": "React",
           "icon": "react",
           "url": "https://react.dev"
@@ -216,11 +236,16 @@
           "name": "Streamlit",
           "icon": "streamlit",
           "url": "https://streamlit.io"
+        },
+        {
+          "name": "Next.js",
+          "icon": "nextdotjs",
+          "url": "https://nextjs.org"
         }
       ]
     },
     {
-      "category": "Cloud & AI Tools",
+      "category": "Cloud & Tooling",
       "items": [
         {
           "name": "Vertex AI",
@@ -241,6 +266,21 @@
           "name": "Model Context Protocol",
           "icon": "modelcontextprotocol",
           "url": "https://modelcontextprotocol.io"
+        },
+        {
+          "name": "Amazon S3",
+          "icon": "amazons3",
+          "url": "https://aws.amazon.com/s3/"
+        },
+        {
+          "name": "Sentry",
+          "icon": "sentry",
+          "url": "https://sentry.io"
+        },
+        {
+          "name": "Pino",
+          "icon": "",
+          "url": "https://getpino.io"
         }
       ]
     }
