@@ -46,13 +46,13 @@
     }
   ],
   "actions": {
-    "resume": "assets/resume.pdf",
+    "resume": "assets/Subham_Kumar_Panda_AI_ML_Resume.pdf",
     "bookCallUrl": ""
   },
   "about": {
-    "intro": "I'm a fresher developer focused on agentic development, GenAI and Python full-stack engineering. I enjoy turning ideas into working software — LLM features, REST APIs, databases and cloud storage — and I'm open to AI, SDE and software engineering roles.",
+    "intro": "I'm a fresher developer focused on agentic development, GenAI and Python full-stack engineering. I enjoy turning ideas into working software: LLM features, REST APIs, databases and cloud storage. I'm open to AI, SDE and software engineering roles.",
     "bullets": [
-      "Worked on an LLM-powered **WhatsApp guest-support bot** during my internship — structured request intake, human handoff and guardrails against made-up answers.",
+      "Worked on an LLM-powered **WhatsApp guest-support bot** during my internship, with structured request intake, human handoff and guardrails against made-up answers.",
       "Contributed to the **file upload pipeline** of a multi-tenant B2B SaaS, moving files from PostgreSQL to S3-compatible object storage with signed URLs.",
       "Hands-on with **RAG**, transformer fine-tuning, and serving models behind **FastAPI** and Flask REST APIs.",
       "Currently exploring **LangGraph** agents that turn business questions into safe, read-only SQL. Claude Code and MCP are part of my daily workflow."
@@ -76,6 +76,11 @@
           "name": "C",
           "icon": "c",
           "url": "https://en.wikipedia.org/wiki/C_(programming_language)"
+        },
+        {
+          "name": "C++",
+          "icon": "cplusplus",
+          "url": "https://isocpp.org"
         },
         {
           "name": "TypeScript",
@@ -163,14 +168,14 @@
           "url": "https://shap.readthedocs.io"
         },
         {
-          "name": "Jupyter",
-          "icon": "jupyter",
-          "url": "https://jupyter.org"
+          "name": "Keras",
+          "icon": "keras",
+          "url": "https://keras.io"
         },
         {
-          "name": "Colab",
-          "icon": "googlecolab",
-          "url": "https://colab.research.google.com"
+          "name": "OpenCV",
+          "icon": "opencv",
+          "url": "https://opencv.org"
         }
       ]
     },
@@ -298,9 +303,9 @@
           "start": "05.2026",
           "end": "08.2026",
           "bullets": [
-            "**AI Guest-Support Chatbot (WhatsApp)** — designed the service-request intake and human-handoff flow: the bot collects details one question at a time, confirms a summary with the guest, then assigns the chat to the guest-relations team and pauses itself.",
+            "**AI Guest-Support Chatbot (WhatsApp)**: designed the service-request intake and human-handoff flow: the bot collects details one question at a time, confirms a summary with the guest, then assigns the chat to the guest-relations team and pauses itself.",
             "Added no-hallucination guardrails (never quotes prices or invents services), validated behaviour with a DB-free test harness, and shipped dark behind a feature flag with a PostgreSQL schema and rollback runbook.",
-            "**ScaleOps, multi-tenant B2B SaaS** — owned the client-to-bucket upload pipeline (84 commits): moved files from base64 PostgreSQL rows to Linode Object Storage so the DB stores only references, cutting storage cost.",
+            "**ScaleOps, multi-tenant B2B SaaS**: owned the client-to-bucket upload pipeline (84 commits): moved files from base64 PostgreSQL rows to Linode Object Storage so the DB stores only references, cutting storage cost.",
             "Made uploads outage-tolerant (circuit breaker, auto-draining outbox, read-through cache) and secured delivery with permission-checked access, a shared upload validator and signed URLs; set up dev, prod and backup buckets."
           ],
           "skills": [
@@ -423,7 +428,7 @@
   ],
   "certifications": [
     {
-      "name": "Google Cloud Skills Boost — Vertex AI, Diamond League",
+      "name": "Google Cloud Skills Boost: Vertex AI, Diamond League",
       "url": "https://www.skills.google/public_profiles/ce1dba77-c3e2-4a5f-a10a-6100e6275f81"
     },
     {

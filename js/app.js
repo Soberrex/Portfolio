@@ -108,7 +108,7 @@
       ? `<img class="avatar" src="${esc(p.avatar)}" alt="${esc(p.name)}" onerror="this.outerHTML='<div class=&quot;avatar fallback&quot;>${esc(initials(p.name))}</div>'">`
       : `<div class="avatar fallback">${esc(initials(p.name))}</div>`;
     return `
-      <div class="cover">${pixelWord(p.monogram || initials(p.name))}</div>
+      <div class="cover"><canvas class="hero3d" aria-hidden="true"></canvas>${pixelWord(p.monogram || initials(p.name))}</div>
       <div class="hero line" id="top">
         <div class="avatar-wrap">${avatar}</div>
         <div class="hero-text">
