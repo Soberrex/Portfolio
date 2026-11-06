@@ -10,7 +10,7 @@
   --link: #2563eb;
   --success: #16a34a;
   --dot: #d4d4d8;
-  --heat-0: #ebebed; --heat-1: #c4c4c8; --heat-2: #9a9aa1; --heat-3: #63636b; --heat-4: #27272a;
+  --heat-0: #ebedf0; --heat-1: #9be9a8; --heat-2: #40c463; --heat-3: #30a14e; --heat-4: #216e39;
   --sans: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   --w: 768px;
@@ -27,7 +27,7 @@
   --link: #3080ff;
   --success: #00c758;
   --dot: #27272a;
-  --heat-0: #18181b; --heat-1: #3f3f46; --heat-2: #71717a; --heat-3: #a1a1aa; --heat-4: #fafafa;
+  --heat-0: #161b22; --heat-1: #0e4429; --heat-2: #006d32; --heat-3: #26a641; --heat-4: #39d353;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -131,7 +131,7 @@ kbd { font-family: var(--mono); font-size: 11px; padding: 1px 5px; border-radius
 .social { display: flex; align-items: center; gap: 14px; padding: 14px 16px; border-bottom: 1px solid var(--border); transition: background .15s; position: relative; }
 .social:nth-child(odd) { border-right: 1px solid var(--border); }
 .social:hover { background: var(--surface-2); }
-.social-logo { width: 36px; height: 36px; border-radius: 9px; display: grid; place-items: center; background: var(--fg); color: var(--bg); flex-shrink: 0; }
+.social-logo { width: 36px; height: 36px; border-radius: 9px; display: grid; place-items: center; background: var(--surface); border: 1px solid var(--border); color: var(--fg); flex-shrink: 0; }
 .social-logo .si { width: 20px; height: 20px; }
 .social-title { font-weight: 500; }
 .social-cta { font-size: 13px; color: var(--muted); }
@@ -168,16 +168,22 @@ kbd { font-family: var(--mono); font-size: 11px; padding: 1px 5px; border-radius
 .stack-cat { font-size: 14px; color: var(--muted); padding-top: 3px; }
 .chips { display: flex; flex-wrap: wrap; gap: 6px; }
 .chip {
-  display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 10px;
-  border: 1px solid var(--border); border-radius: 7px; font-size: 13px; background: var(--surface-2); transition: border-color .15s, background .15s;
+  display: inline-flex; align-items: center; gap: 7px; height: 28px; padding: 0 11px 0 8px;
+  border: 1px solid var(--border); border-radius: 999px; font-size: 13px; background: var(--surface); transition: border-color .15s, background .15s;
 }
 a.chip:hover { border-color: var(--ring); background: var(--surface); }
 .chip img { width: 14px; height: 14px; }
-.dark .chip img, .dark .si, .dark .ov-ic img { filter: invert(1); }
-.dark .social-logo .si { filter: none; }
-.social-logo .si { filter: invert(1); }
-.dark .social-logo .si { filter: none; }
-.chip .dotmark { width: 6px; height: 6px; border-radius: 50%; background: var(--muted-2); }
+/* brand logos (see hydrateIcons) */
+.bi { width: 16px; height: 16px; flex-shrink: 0; display: inline-grid; place-items: center; background: transparent; }
+.bi.ready { background: var(--c); -webkit-mask: var(--m) center / contain no-repeat; mask: var(--m) center / contain no-repeat; }
+.dark .bi.on-dark-flip.ready { background: #fafafa; }
+html:not(.dark) .bi.on-light-flip.ready { background: #09090b; }
+.bi.miss { border-radius: 4px; background: var(--surface); border: 1px solid var(--border); font: 600 9px/1 var(--mono); color: var(--muted); }
+.bi-img { width: 16px; height: 16px; object-fit: contain; }
+.chip .si { width: 16px; height: 16px; }
+.chip .note { font-style: italic; font-size: 11px; color: var(--muted-2); }
+.social-logo .bi { width: 20px; height: 20px; }
+.social-logo .bi.miss { width: 20px; height: 20px; font-size: 11px; }
 .tag { display: inline-flex; align-items: center; height: 22px; padding: 0 7px; border-radius: 5px; font-family: var(--mono); font-size: 12px; color: var(--muted); background: var(--surface); border: 1px solid var(--border); }
 
 /* experience */
@@ -219,8 +225,8 @@ a.chip:hover { border-color: var(--ring); background: var(--surface); }
 .project-actions a { width: 28px; height: 28px; display: grid; place-items: center; border-radius: 6px; color: var(--muted); }
 .project-actions a:hover { background: var(--surface); color: var(--fg); }
 .project-actions .ic, .project-actions .si { width: 15px; height: 15px; }
-.project-body { padding: 0 16px 16px 64px; color: var(--muted); font-size: 14.5px; }
-.project-body img.cover-img { margin-top: 12px; border-radius: 10px; border: 1px solid var(--border); width: 100%; aspect-ratio: 16/9; object-fit: cover; }
+.project-body { padding: 0 16px 16px; color: var(--muted); font-size: 14.5px; }
+.project-body img.cover-img { border-radius: 10px; border: 1px solid var(--border); width: 100%; aspect-ratio: 16/9; object-fit: cover; }
 .hidden-item { display: none; }
 .more { display: flex; justify-content: center; padding: 16px; }
 

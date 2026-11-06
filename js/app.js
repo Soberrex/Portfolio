@@ -32,12 +32,34 @@
     github: 'M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3',
     linkedin: 'M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z',
   };
-  const SI = 'https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/';
-  function brand(slug, cls = 'si') {
-    if (!slug) return '<span class="dotmark"></span>';
-    if (BRAND[slug]) return `<svg viewBox="0 0 24 24" class="${cls}" fill="currentColor" style="filter:none" aria-hidden="true"><path d="${BRAND[slug]}"/></svg>`;
+  /* Brand logos: Simple Icons slug (cdn.simpleicons.org) → drawn in the brand colour; near-black / near-white
+     brands flip with the theme (like the reference's light/dark icon pairs). A path/URL also works. */
+  const iconCache = new Map();
+  function brand(slug, cls = 'si', name = '') {
+    if (BRAND[slug]) return `<svg viewBox="0 0 24 24" class="${cls}" fill="currentColor"${slug === 'linkedin' ? ' style="color:#0a66c2"' : ''} aria-hidden="true"><path d="${BRAND[slug]}"/></svg>`;
     if (slug === 'gmail' || slug === 'mail') return icon('mail', 'ic');
-    return `<img class="${cls}" src="${SI}${esc(slug)}.svg" alt="" loading="lazy" onerror="this.outerHTML='<span class=&quot;dotmark&quot;></span>'">`;
+    if (/^(https?:|assets\/|\/)/.test(slug || '')) return `<img class="bi-img" src="${esc(slug)}" alt="" loading="lazy">`;
+    return `<span class="bi" data-slug="${esc(slug || '')}" data-name="${esc(name)}" aria-hidden="true"></span>`;
+  }
+  function hydrateIcons(root = document) {
+    root.querySelectorAll('.bi:not([data-done])').forEach(async (el) => {
+      el.dataset.done = '1';
+      const slug = el.dataset.slug;
+      const miss = () => { el.classList.add('miss'); el.textContent = (el.dataset.name || '?').trim().charAt(0).toUpperCase(); };
+      if (!slug) return miss();
+      try {
+        if (!iconCache.has(slug)) iconCache.set(slug, fetch(`https://cdn.simpleicons.org/${encodeURIComponent(slug)}`).then((r) => { if (!r.ok) throw 0; return r.text(); }));
+        const svg = await iconCache.get(slug);
+        const hex = ((/fill="#([0-9a-f]{6})"/i.exec(svg) || [])[1] || '888888');
+        const [r, g, b] = [0, 2, 4].map((i) => parseInt(hex.slice(i, i + 2), 16) / 255);
+        const lum = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+        el.style.setProperty('--c', `#${hex}`);
+        el.style.setProperty('--m', `url("data:image/svg+xml;utf8,${encodeURIComponent(svg)}")`);
+        if (lum < 0.28) el.classList.add('on-dark-flip');
+        if (lum > 0.8) el.classList.add('on-light-flip');
+        el.classList.add('ready');
+      } catch (e) { miss(); }
+    });
   }
 
   /* ---------- pixel monogram ---------- */
@@ -135,7 +157,7 @@
     const rows = (d.stack || []).map((g) => `
       <div class="stack-row"><div class="stack-cat">${esc(g.category)}</div><div class="chips">
         ${(g.items || []).map((it) => {
-          const inner = `${brand(it.icon)}${esc(it.name)}`;
+          const inner = `${brand(it.icon, 'si', it.name)}${esc(it.name)}${it.note ? ` <em class="note">${esc(it.note)}</em>` : ''}`;
           return it.url ? `<a class="chip" href="${esc(it.url)}" target="_blank" rel="noopener">${inner}</a>` : `<span class="chip">${inner}</span>`;
         }).join('')}
       </div></div>`).join('');
@@ -192,13 +214,13 @@
           <span class="project-actions">
             ${p.url ? `<a href="${esc(p.url)}" target="_blank" rel="noopener" aria-label="Live demo" data-umami-event="project-demo" data-umami-event-name="${esc(p.name)}">${icon('link')}</a>` : ''}
             ${p.repo ? `<a href="${esc(p.repo)}" target="_blank" rel="noopener" aria-label="Source" data-umami-event="project-repo" data-umami-event-name="${esc(p.name)}">${brand('github')}</a>` : ''}
-            <button class="mini" aria-expanded="false" data-toggle aria-label="Details">${icon('chev', 'ic chev')}</button>
+            <button class="mini" aria-expanded="${i === 0}" data-toggle aria-label="Details">${icon('chev', 'ic chev')}</button>
           </span>
         </div>
         <div class="collapsible"><div><div class="project-body">
-          <p>${md(p.description)}</p>
+          ${p.image ? `<img class="cover-img" src="${esc(p.image)}" alt="${esc(p.name)} preview" loading="lazy">` : ''}
+          <p style="margin-top:12px">${md(p.description)}</p>
           ${(p.tags || []).length ? `<div class="tags">${p.tags.map((t) => `<span class="tag">${esc(t)}</span>`).join('')}</div>` : ''}
-          ${p.image ? `<img class="cover-img" src="${esc(p.image)}" alt="${esc(p.name)} screenshot" loading="lazy">` : ''}
         </div></div></div>
       </div>`;
     }).join('');
@@ -221,7 +243,6 @@
       <span>Built with care by <a href="https://github.com/${esc(d.github)}" target="_blank" rel="noopener">${esc(p.name.split(' ')[0])}</a>.</span>
       ${f.credit ? `<span>${f.creditUrl ? `<a href="${esc(f.creditUrl)}" target="_blank" rel="noopener">${esc(f.credit)}</a>` : esc(f.credit)}.</span>` : ''}
       <span>© ${new Date().getFullYear()} ${esc(p.name)}. All rights reserved.</span>
-      <span><button style="text-decoration:underline;text-underline-offset:3px" onclick="openConsent()">Cookie settings</button></span>
     </footer>
     <div class="footer-mark">${pixelWord(p.monogram || initials(p.name))}</div>`;
   }
@@ -292,6 +313,7 @@
       col.style.gridTemplateRows = exp ? '0fr' : '1fr';
     }));
     document.querySelectorAll('.role-head[aria-expanded="true"]').forEach((b) => (b.nextElementSibling.style.gridTemplateRows = '1fr'));
+    document.querySelectorAll('[data-toggle][aria-expanded="true"]').forEach((b) => (b.closest('.project').querySelector('.collapsible').style.gridTemplateRows = '1fr'));
     const sm = $('#show-more');
     if (sm) sm.addEventListener('click', () => {
       const hidden = document.querySelectorAll('.project.hidden-item');
@@ -345,10 +367,9 @@
     clearTimeout(toastT); toastT = setTimeout(() => (t.hidden = true), ms);
   }
 
-  /* ---------- analytics (Umami, consent-gated) ---------- */
+  /* ---------- analytics (Umami, cookieless) ---------- */
   const UMAMI_ID = '8d8adfb0-f5a0-40af-a2ef-ae6aa350526f';
   const UMAMI_DOMAINS = 'soberrex.github.io';
-  const consent = () => { try { return localStorage.getItem('consent'); } catch (e) { return null; } };
   function loadUmami() {
     if (document.getElementById('umami')) return;
     const s = document.createElement('script');
@@ -356,25 +377,8 @@
     s.dataset.websiteId = UMAMI_ID; s.dataset.domains = UMAMI_DOMAINS;
     document.head.appendChild(s);
   }
-  function setupConsent() {
-    if (consent() === 'all') return loadUmami();
-    if (consent()) return;
-    document.body.insertAdjacentHTML('beforeend', `
-      <div class="consent" id="consent" role="dialog" aria-label="Cookie consent">
-        <p>I use privacy-friendly analytics to understand how visitors find and use this site. No ads, no selling data.</p>
-        <div class="consent-btns">
-          <button class="btn btn-primary" data-c="all">Accept</button>
-          <button class="btn btn-ghost" data-c="necessary">Necessary only</button>
-        </div>
-      </div>`);
-    $('#consent').addEventListener('click', (e) => {
-      const c = e.target.closest('[data-c]')?.dataset.c; if (!c) return;
-      try { localStorage.setItem('consent', c); } catch (err) {}
-      $('#consent').remove();
-      if (c === 'all') loadUmami();
-    });
-  }
-  window.openConsent = () => { try { localStorage.removeItem('consent'); } catch (e) {} $('#consent')?.remove(); setupConsent(); };
+  /* Umami is cookieless and stores no personal data, so no consent banner is needed. */
+  function setupConsent() { loadUmami(); }
 
   /* ---------- main ---------- */
   const state = { data: null };
@@ -389,6 +393,7 @@
     startClock(data.profile.timezone);
     startTyping(data.profile.tagline || '');
     bindInteractions();
+    hydrateIcons();
     loadHeatmap(data.github);
     document.dispatchEvent(new CustomEvent('portfolio:rendered'));
   }

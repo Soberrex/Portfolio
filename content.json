@@ -1,5 +1,9 @@
 {
-  "repo": { "owner": "Soberrex", "name": "Portfolio", "branch": "main" },
+  "repo": {
+    "owner": "Soberrex",
+    "name": "Portfolio",
+    "branch": "main"
+  },
   "profile": {
     "name": "Subham Kumar Panda",
     "monogram": "SKP",
@@ -16,10 +20,30 @@
     "pronouns": "he/him"
   },
   "socials": [
-    { "label": "GitHub", "icon": "github", "cta": "Follow me", "url": "https://github.com/Soberrex" },
-    { "label": "LinkedIn", "icon": "linkedin", "cta": "Connect with me", "url": "https://www.linkedin.com/in/subham-kumar-panda-156420259/" },
-    { "label": "Email", "icon": "gmail", "cta": "Write to me", "url": "mailto:subhampersonal123@gmail.com" },
-    { "label": "Google Cloud", "icon": "googlecloud", "cta": "Skills profile", "url": "https://www.skills.google/public_profiles/ce1dba77-c3e2-4a5f-a10a-6100e6275f81" }
+    {
+      "label": "GitHub",
+      "icon": "github",
+      "cta": "Follow me",
+      "url": "https://github.com/Soberrex"
+    },
+    {
+      "label": "LinkedIn",
+      "icon": "linkedin",
+      "cta": "Connect with me",
+      "url": "https://www.linkedin.com/in/subham-kumar-panda-156420259/"
+    },
+    {
+      "label": "Email",
+      "icon": "gmail",
+      "cta": "Write to me",
+      "url": "mailto:subhampersonal123@gmail.com"
+    },
+    {
+      "label": "Google Cloud",
+      "icon": "googlecloud",
+      "cta": "Skills profile",
+      "url": "https://www.skills.google/public_profiles/ce1dba77-c3e2-4a5f-a10a-6100e6275f81"
+    }
   ],
   "actions": {
     "resume": "assets/resume.pdf",
@@ -35,43 +59,191 @@
     ]
   },
   "stack": [
-    { "category": "Machine Learning", "items": [
-      { "name": "Python", "icon": "python", "url": "https://www.python.org" },
-      { "name": "NumPy", "icon": "numpy", "url": "https://numpy.org" },
-      { "name": "Pandas", "icon": "pandas", "url": "https://pandas.pydata.org" },
-      { "name": "Scikit-learn", "icon": "scikitlearn", "url": "https://scikit-learn.org" },
-      { "name": "TensorFlow", "icon": "tensorflow", "url": "https://www.tensorflow.org" },
-      { "name": "PyTorch", "icon": "pytorch", "url": "https://pytorch.org" },
-      { "name": "SHAP", "icon": "", "url": "https://shap.readthedocs.io" },
-      { "name": "Jupyter", "icon": "jupyter", "url": "https://jupyter.org" },
-      { "name": "Colab", "icon": "googlecolab", "url": "https://colab.research.google.com" }
-    ]},
-    { "category": "NLP & GenAI", "items": [
-      { "name": "Hugging Face", "icon": "huggingface", "url": "https://huggingface.co" },
-      { "name": "LLM APIs", "icon": "anthropic", "url": "https://docs.anthropic.com" },
-      { "name": "RAG", "icon": "", "url": "" },
-      { "name": "LangChain", "icon": "langchain", "url": "https://www.langchain.com" },
-      { "name": "LangGraph", "icon": "langchain", "url": "https://langchain-ai.github.io/langgraph/" },
-      { "name": "LlamaIndex", "icon": "", "url": "https://www.llamaindex.ai" },
-      { "name": "ChromaDB", "icon": "", "url": "https://www.trychroma.com" }
-    ]},
-    { "category": "Engineering", "items": [
-      { "name": "FastAPI", "icon": "fastapi", "url": "https://fastapi.tiangolo.com" },
-      { "name": "Flask", "icon": "flask", "url": "https://flask.palletsprojects.com" },
-      { "name": "PostgreSQL", "icon": "postgresql", "url": "https://www.postgresql.org" },
-      { "name": "MongoDB", "icon": "mongodb", "url": "https://www.mongodb.com" },
-      { "name": "Docker", "icon": "docker", "url": "https://www.docker.com" },
-      { "name": "Git", "icon": "git", "url": "https://git-scm.com" },
-      { "name": "GitHub Actions", "icon": "githubactions", "url": "https://github.com/features/actions" },
-      { "name": "TypeScript", "icon": "typescript", "url": "https://www.typescriptlang.org" },
-      { "name": "Next.js", "icon": "nextdotjs", "url": "https://nextjs.org" }
-    ]},
-    { "category": "Cloud & AI Tools", "items": [
-      { "name": "Vertex AI", "icon": "googlecloud", "url": "https://cloud.google.com/vertex-ai" },
-      { "name": "Linode Object Storage", "icon": "akamai", "url": "https://www.linode.com/products/object-storage/" },
-      { "name": "Claude Code", "icon": "claude", "url": "https://claude.com/claude-code" },
-      { "name": "MCP", "icon": "", "url": "https://modelcontextprotocol.io" }
-    ]}
+    {
+      "category": "Machine Learning",
+      "items": [
+        {
+          "name": "Python",
+          "icon": "python",
+          "url": "https://www.python.org"
+        },
+        {
+          "name": "NumPy",
+          "icon": "numpy",
+          "url": "https://numpy.org"
+        },
+        {
+          "name": "Pandas",
+          "icon": "pandas",
+          "url": "https://pandas.pydata.org"
+        },
+        {
+          "name": "Scikit-learn",
+          "icon": "scikitlearn",
+          "url": "https://scikit-learn.org"
+        },
+        {
+          "name": "TensorFlow",
+          "icon": "tensorflow",
+          "url": "https://www.tensorflow.org"
+        },
+        {
+          "name": "PyTorch",
+          "icon": "pytorch",
+          "url": "https://pytorch.org"
+        },
+        {
+          "name": "SHAP",
+          "icon": "",
+          "url": "https://shap.readthedocs.io"
+        },
+        {
+          "name": "Jupyter",
+          "icon": "jupyter",
+          "url": "https://jupyter.org"
+        },
+        {
+          "name": "Colab",
+          "icon": "googlecolab",
+          "url": "https://colab.research.google.com"
+        }
+      ]
+    },
+    {
+      "category": "NLP & GenAI",
+      "items": [
+        {
+          "name": "Hugging Face",
+          "icon": "huggingface",
+          "url": "https://huggingface.co"
+        },
+        {
+          "name": "LLM APIs",
+          "icon": "anthropic",
+          "url": "https://docs.anthropic.com"
+        },
+        {
+          "name": "RAG",
+          "icon": "",
+          "url": ""
+        },
+        {
+          "name": "LangChain",
+          "icon": "langchain",
+          "url": "https://www.langchain.com"
+        },
+        {
+          "name": "LangGraph",
+          "icon": "langchain",
+          "url": "https://langchain-ai.github.io/langgraph/"
+        },
+        {
+          "name": "LlamaIndex",
+          "icon": "",
+          "url": "https://www.llamaindex.ai"
+        },
+        {
+          "name": "ChromaDB",
+          "icon": "",
+          "url": "https://www.trychroma.com"
+        }
+      ]
+    },
+    {
+      "category": "Engineering",
+      "items": [
+        {
+          "name": "FastAPI",
+          "icon": "fastapi",
+          "url": "https://fastapi.tiangolo.com"
+        },
+        {
+          "name": "Flask",
+          "icon": "flask",
+          "url": "https://flask.palletsprojects.com"
+        },
+        {
+          "name": "PostgreSQL",
+          "icon": "postgresql",
+          "url": "https://www.postgresql.org"
+        },
+        {
+          "name": "MongoDB",
+          "icon": "mongodb",
+          "url": "https://www.mongodb.com"
+        },
+        {
+          "name": "Docker",
+          "icon": "docker",
+          "url": "https://www.docker.com"
+        },
+        {
+          "name": "Git",
+          "icon": "git",
+          "url": "https://git-scm.com"
+        },
+        {
+          "name": "GitHub Actions",
+          "icon": "githubactions",
+          "url": "https://github.com/features/actions"
+        },
+        {
+          "name": "TypeScript",
+          "icon": "typescript",
+          "url": "https://www.typescriptlang.org"
+        },
+        {
+          "name": "Next.js",
+          "icon": "nextdotjs",
+          "url": "https://nextjs.org"
+        },
+        {
+          "name": "React",
+          "icon": "react",
+          "url": "https://react.dev"
+        },
+        {
+          "name": "Redis",
+          "icon": "redis",
+          "url": "https://redis.io"
+        },
+        {
+          "name": "DuckDB",
+          "icon": "duckdb",
+          "url": "https://duckdb.org"
+        },
+        {
+          "name": "Streamlit",
+          "icon": "streamlit",
+          "url": "https://streamlit.io"
+        }
+      ]
+    },
+    {
+      "category": "Cloud & AI Tools",
+      "items": [
+        {
+          "name": "Vertex AI",
+          "icon": "googlecloud",
+          "url": "https://cloud.google.com/vertex-ai"
+        },
+        {
+          "name": "Linode Object Storage",
+          "icon": "akamai",
+          "url": "https://www.linode.com/products/object-storage/"
+        },
+        {
+          "name": "Claude Code",
+          "icon": "claude",
+          "url": "https://claude.com/claude-code"
+        },
+        {
+          "name": "Model Context Protocol",
+          "icon": "modelcontextprotocol",
+          "url": "https://modelcontextprotocol.io"
+        }
+      ]
+    }
   ],
   "experience": [
     {
@@ -91,7 +263,16 @@
             "**ScaleOps, multi-tenant B2B SaaS** — owned the client-to-bucket upload pipeline (84 commits): moved files from base64 PostgreSQL rows to Linode Object Storage so the DB stores only references, cutting storage cost.",
             "Made uploads outage-tolerant (circuit breaker, auto-draining outbox, read-through cache) and secured delivery with permission-checked access, a shared upload validator and signed URLs; set up dev, prod and backup buckets."
           ],
-          "skills": ["Python", "FastAPI", "Claude API", "PostgreSQL", "MongoDB", "TypeScript", "Next.js", "Linode Object Storage"],
+          "skills": [
+            "Python",
+            "FastAPI",
+            "Claude API",
+            "PostgreSQL",
+            "MongoDB",
+            "TypeScript",
+            "Next.js",
+            "Linode Object Storage"
+          ],
           "links": []
         }
       ]
@@ -110,60 +291,109 @@
           "bullets": [
             "Built a Flask REST API for real-time model inference, with error handling and tests for reliable predictions."
           ],
-          "skills": ["Python", "Flask", "REST APIs", "TensorFlow"],
+          "skills": [
+            "Python",
+            "Flask",
+            "REST APIs",
+            "TensorFlow"
+          ],
           "links": [
-            { "label": "Certificate", "url": "https://drive.google.com/file/d/12-tcCiotDpcDflLsRQXCdizeomaVfC4m/view?usp=sharing" }
+            {
+              "label": "Certificate",
+              "url": "https://drive.google.com/file/d/12-tcCiotDpcDflLsRQXCdizeomaVfC4m/view?usp=sharing"
+            }
           ]
         }
       ]
     }
   ],
   "education": [
-    { "degree": "MCA (Master of Computer Applications)", "school": "Silicon University, Bhubaneswar", "start": "2025", "end": "2027 (expected)" },
-    { "degree": "B.Sc. Computer Science", "school": "Rajdhani College, Bhubaneswar", "start": "2022", "end": "2025" }
+    {
+      "degree": "MCA (Master of Computer Applications)",
+      "school": "Silicon University, Bhubaneswar",
+      "start": "2025",
+      "end": "2027 (expected)"
+    },
+    {
+      "degree": "B.Sc. Computer Science",
+      "school": "Rajdhani College, Bhubaneswar",
+      "start": "2022",
+      "end": "2025"
+    }
   ],
   "projects": [
     {
-      "name": "Autonomous Data & Reporting Agent",
-      "status": "In progress",
-      "image": "",
-      "url": "",
-      "repo": "",
-      "description": "LangGraph agent that turns business questions into DuckDB SQL, with a critic loop that checks the generated SQL and sqlglot guardrails allowing only read-only, row-limited SELECTs.",
-      "tags": ["Python", "LangGraph", "DuckDB", "sqlglot"]
-    },
-    {
       "name": "DocuChat AI",
       "status": "",
-      "image": "",
+      "image": "assets/projects/docuchat.jpg",
       "url": "https://docuchat-ai-wp7x.onrender.com/",
       "repo": "",
       "description": "Full-stack RAG app that parses PDF, TXT and DOCX files and answers questions through vector search.",
-      "tags": ["FastAPI", "PostgreSQL", "LlamaIndex", "ChromaDB", "React"]
+      "tags": [
+        "FastAPI",
+        "PostgreSQL",
+        "LlamaIndex",
+        "ChromaDB",
+        "React"
+      ]
     },
     {
       "name": "BERT Intent Classification Chatbot",
       "status": "",
-      "image": "",
+      "image": "assets/projects/intent-chatbot.jpg",
       "url": "https://intent-classificaton-chatbot.streamlit.app/",
       "repo": "",
       "description": "Trained BERT on Banking77 and CLINC150 (227 intents); served via FastAPI with Redis and hosted on Hugging Face.",
-      "tags": ["BERT", "Hugging Face", "FastAPI", "Streamlit", "Redis"]
+      "tags": [
+        "BERT",
+        "Hugging Face",
+        "FastAPI",
+        "Streamlit",
+        "Redis"
+      ]
+    },
+    {
+      "name": "Autonomous Data & Reporting Agent",
+      "status": "In progress",
+      "image": "assets/projects/data-agent.jpg",
+      "url": "",
+      "repo": "",
+      "description": "LangGraph agent that turns business questions into DuckDB SQL, with a critic loop that checks the generated SQL and sqlglot guardrails allowing only read-only, row-limited SELECTs.",
+      "tags": [
+        "Python",
+        "LangGraph",
+        "DuckDB",
+        "sqlglot"
+      ]
     },
     {
       "name": "Emotion Classification Pipeline",
       "status": "In progress",
-      "image": "",
+      "image": "assets/projects/emotion.jpg",
       "url": "",
       "repo": "",
       "description": "End-to-end training and evaluation pipeline: fine-tuned RoBERTa-base with Monte Carlo Dropout, ran a 5-model ablation study, and used SHAP and error analysis.",
-      "tags": ["RoBERTa", "Transformers", "SHAP", "Colab"]
+      "tags": [
+        "RoBERTa",
+        "Transformers",
+        "SHAP",
+        "Colab"
+      ]
     }
   ],
   "certifications": [
-    { "name": "Google Cloud Skills Boost — Vertex AI, Diamond League", "url": "https://www.skills.google/public_profiles/ce1dba77-c3e2-4a5f-a10a-6100e6275f81" },
-    { "name": "IBM Artificial Intelligence Fundamentals", "url": "https://drive.google.com/file/d/1fKtHttXEMpAHZBqSbdZQSiRWvcLqJIWB/view?usp=sharing" }
+    {
+      "name": "Google Cloud Skills Boost — Vertex AI, Diamond League",
+      "url": "https://www.skills.google/public_profiles/ce1dba77-c3e2-4a5f-a10a-6100e6275f81"
+    },
+    {
+      "name": "IBM Artificial Intelligence Fundamentals",
+      "url": "https://drive.google.com/file/d/1fKtHttXEMpAHZBqSbdZQSiRWvcLqJIWB/view?usp=sharing"
+    }
   ],
   "github": "Soberrex",
-  "footer": { "credit": "Design inspired by Dai's open-source portfolio", "creditUrl": "https://chanhdai.com" }
+  "footer": {
+    "credit": "Design inspired by Dai's open-source portfolio",
+    "creditUrl": "https://chanhdai.com"
+  }
 }
